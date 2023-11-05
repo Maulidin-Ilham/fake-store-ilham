@@ -11,7 +11,6 @@ export const useFetchProduct = () => {
       try {
         setLoading(true);
         const response = await axios.get("https://fakestoreapi.com/products");
-        console.log(response.data);
 
         setProducts(response.data);
         setLoading(false);

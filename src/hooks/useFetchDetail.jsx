@@ -14,7 +14,6 @@ export const useFetchDetail = (id) => {
         const response = await axios.get(
           `https://fakestoreapi.com/products/${id}`
         );
-        console.log(response.data);
 
         setDetail(response.data);
         setLoading(false);

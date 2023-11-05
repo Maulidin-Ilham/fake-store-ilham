@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const { detail, loading } = useFetchDetail(id);
 
   return (
-    <div className="grid grid-cols-1 mx-10 my-10  lg:max-w-4xl lg:mx-auto md:max-w-2xl md:mx-auto">
+    <div className="grid grid-cols-1  mx-10 my-10  lg:max-w-4xl lg:mx-auto md:max-w-2xl md:mx-auto">
       {loading ? (
         <>
           <Loading />
@@ -20,13 +20,21 @@ const ProductDetail = () => {
             {detail.category}
           </h1>
           <h1 className="mt-4 font-semibold text-xl">$ {detail.price}</h1>
-          <div className="mt-10">
+          <div className="mt-10 md:flex md:flex-row md:justify-between md:items-center  md:space-x-10">
             <img src={detail.image} alt="" className=" object-cover w-52 " />
+            <div className="hidden md:flex md:flex-col font-semibold ">
+              <p className=" ">{detail.description}</p>
+              <div className="mt-5 md:mt-10 hover:opacity-80">
+                <button className="w-full py-4 bg-black text-white font-semibold">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
           </div>
-          <p className="mt-10 font-semibold">{detail.description}</p>
+          <p className="md:hidden mt-10 font-semibold">{detail.description}</p>
 
-          <div className="mt-5">
-            <button className="w-full py-4 bg-black text-white font-semibold">
+          <div className="md:hidden mt-5 md:mt-10 hover:opacity-80">
+            <button className=" w-full py-4 bg-black text-white font-semibold">
               Add to Cart
             </button>
           </div>
