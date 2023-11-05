@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ProductList = ({ products }) => {
   return (
     <>
-      <div className="grid grid-cols-1 mx-20 mt-12 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-4xl lg:mx-auto md:max-w-2xl md:mx-auto">
+      <div className="grid grid-cols-1 mx-10 mt-12 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-4xl lg:mx-auto md:max-w-2xl md:mx-auto">
         {products.map((product) => (
           <Link
             to={`product/${product.id}`}
