@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 const ProductList = ({ products }) => {
@@ -12,7 +13,7 @@ const ProductList = ({ products }) => {
             <img
               src={product.image}
               alt=""
-              className="hover:opacity-80 blur-0 grayscale-0 ease-in-out duration-700 "
+              className="hover:opacity-80 blur-0 grayscale-0 ease-in-out duration-500"
             />
             <div className="mt-4">
               <h1 className="font-semibold">{product.title}</h1>
