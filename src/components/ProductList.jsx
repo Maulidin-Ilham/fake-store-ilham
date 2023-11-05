@@ -8,12 +8,12 @@ const ProductList = ({ products }) => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="flex flex-col hover:scale-105  text-left cursor-pointer   border p-5 duration-300 transform transition-transform ease-in-out"
+            className="flex flex-col hover:scale-105  text-left cursor-pointer   border p-5 duration-300 transform transition-transform ease-in-out "
           >
             <img
               src={product.image}
               alt=""
-              className="hover:opacity-80 blur-0 grayscale-0 ease-in-out duration-500"
+              className="hover:opacity-80 blur-0 grayscale-0 ease-in-out duration-500 px-10 md:px-3"
             />
             <div className="mt-4">
               <h1 className="font-semibold">{product.title}</h1>
