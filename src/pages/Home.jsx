@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+
 import Navbar from "../components/Navbar";
 import ProductList from "../components/ProductList";
 import { useFetchProduct } from "../hooks/useFetchProduct";
+import Categories from "../components/Categories";
 
 const Home = () => {
   const { products } = useFetchProduct();
@@ -11,8 +12,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="p-4 ">
-        <h1>Hello ilham</h1>
-        <h1>Produxts</h1>
+        <Categories />
         <ProductList products={products} />
       </div>
     </>

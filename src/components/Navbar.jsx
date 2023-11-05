@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="w-full px-4 py-3 shadow-xl flex justify-between ">
+    <div className="w-full px-4 py-3 bg-[#F5F5F5] flex justify-between ">
       <div>
         <a href="#">Logo</a>
       </div>
