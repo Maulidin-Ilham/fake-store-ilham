@@ -11,7 +11,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <div className="p-4 ">
         {loading ? (
           <>
