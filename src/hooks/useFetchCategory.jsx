@@ -23,7 +23,7 @@ export const useFetchCategory = (category) => {
     };
 
     fetchProducts();
-  }, []);
+  }, [category]);
 
   return { products, loading };
 };

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import ProductDetail from "./pages/ProductDetail";
 import FilterPage from "./pages/FilterPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products/:category" element={<FilterPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useFetchDetail } from "../hooks/useFetchDetail";
 import Loading from "../components/Loading";
+import NotFound from "./NotFound";
 
 const ProductDetail = () => {
   const { id } = useParams();

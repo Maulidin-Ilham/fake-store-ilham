@@ -1,32 +1,46 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useFetchCategory } from "../hooks/useFetchCategory";
+import Loading from "../components/Loading";
+import Categories from "../components/Categories";
 
 const FilterPage = () => {
   const { category } = useParams();
   const { products, loading } = useFetchCategory(category);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (products.length === 0) {
-  //   return <div>No products found for the category: {category}</div>;
-  // }
-
   return (
-    <div>
+    <>
       {loading ? (
         <>
-          <h1>Loading...</h1>
+          <Loading />
         </>
       ) : (
-        <>
-          {products.map((product) => (
-            <div key={product.id}>{product.title}</div>
-          ))}
-        </>
+        <div className="p-4">
+          <Categories />
+          <div className="grid grid-cols-1 mx-4 mt-12 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-4xl lg:mx-auto md:max-w-2xl md:mx-auto">
+            {products.map((product) => (
+              <Link
+                to={`/product/${product.id}`}
+                key={product.id}
+                className="flex flex-col hover:scale-105  text-left cursor-pointer   border py-5 px-8 md:px-5 duration-300 transform transition-transform ease-in-out "
+              >
+                <img
+                  src={product.image}
+                  alt=""
+                  className="hover:opacity-80 blur-0 grayscale-0 ease-in-out duration-500  md:px-3"
+                />
+                <div className="mt-4">
+                  <h1 className="font-semibold">{product.title}</h1>
+                  <h1 className=" capitalize text-gray-500 font-semibold">
+                    {product.category}
+                  </h1>
+                  <h1 className="font-semibold mt-3">$ {product.price}</h1>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
