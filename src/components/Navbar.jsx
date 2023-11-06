@@ -11,7 +11,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="flex space-x-3">
-        <a href="/cart">
+        <a href="/">
           <ShoppingCartIcon />
         </a>
         <a href="#">
