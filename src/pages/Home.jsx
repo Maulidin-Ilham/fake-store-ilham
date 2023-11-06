@@ -5,6 +5,7 @@ import ProductList from "../components/ProductList";
 import { useFetchProduct } from "../hooks/useFetchProduct";
 import Categories from "../components/Categories";
 import Loading from "../components/Loading";
+import { useState } from "react";
 
 const Home = () => {
   const { products, loading } = useFetchProduct();

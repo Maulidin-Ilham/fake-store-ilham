@@ -5,6 +5,7 @@ import Loading from "../components/Loading";
 
 const ProductDetail = () => {
   const { id } = useParams();
+
   const { detail, loading } = useFetchDetail(id);
 
   return (
