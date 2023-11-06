@@ -6,11 +6,14 @@ const Navbar = () => {
   return (
     <div className="w-full text-lg font-semibold px-4 py-3 bg-[#F5F5F5] items-center flex justify-between ">
       <div>
-        <StorefrontIcon to={"/"} />
+        <a href="/">
+          <StorefrontIcon />
+        </a>
       </div>
       <div className="flex space-x-3">
-        <ShoppingCartIcon to={"/cart"} />
-
+        <a href="/cart">
+          <ShoppingCartIcon />
+        </a>
         <a href="#">
           <GitHubIcon />
         </a>
