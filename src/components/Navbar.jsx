@@ -8,7 +8,7 @@ const Navbar = () => {
         <a href="/">Logo</a>
       </div>
       <div className="flex space-x-3">
-        <a href="#">
+        <a href="/cart">
           <ShoppingCartIcon />
         </a>
         <a href="#">
