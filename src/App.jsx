@@ -14,8 +14,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<CartPage />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/products/cart" element={<CartPage />} />
         <Route path="/products/:category" element={<FilterPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
